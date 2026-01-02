@@ -1,0 +1,184 @@
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --blue: #4f8cff;
+    --pink: #ff6ec7;
+    --purple: #9b7bff;
+    --green: #35e0a1;
+    --orange: #ffb84d;
+
+    --bg-main: #f5f9ff;
+    --card-bg: rgba(255,255,255,0.9);
+}
+
+body {
+    background:
+        radial-gradient(circle at top left, #e3f0ff, transparent 40%),
+        radial-gradient(circle at bottom right, #ffe6f3, transparent 45%),
+        linear-gradient(135deg, #fdfbff, #f3f7ff);
+    color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+/* ===== Navigation ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(
+        90deg,
+        rgba(79,140,255,0.25),
+        rgba(255,110,199,0.25),
+        rgba(155,123,255,0.25)
+    );
+    backdrop-filter: blur(14px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+nav a {
+    color: #1a1a1a;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+    text-shadow: 0 0 8px rgba(79,140,255,0.4);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at top, #ffffff, #e3f0ff);
+}
+
+.hero h1 {
+    font-size: 3.6rem;
+    letter-spacing: 3px;
+    background: linear-gradient(
+        90deg,
+        var(--blue),
+        var(--pink),
+        var(--purple)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    max-width: 600px;
+    margin-top: 20px;
+    color: #444;
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 60px 80px;
+}
+
+/* ===== Cards ===== */
+.cards,
+.cards-text {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.cards-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 18px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+    border-top: 6px solid transparent;
+}
+
+/* різні кольори для карток */
+.card:nth-child(1) { border-color: var(--blue); }
+.card:nth-child(2) { border-color: var(--pink); }
+.card:nth-child(3) { border-color: var(--green); }
+.card:nth-child(4) { border-color: var(--purple); }
+.card:nth-child(5) { border-color: var(--orange); }
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+/* ===== Images ===== */
+.cards-photo {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+.cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+
+
+/* ===== Text Styles ===== */
+.text {
+    margin-bottom: 35px;
+}
+
+.top {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+    background: linear-gradient(
+        90deg,
+        var(--green),
+        var(--blue),
+        var(--purple)
+    );
+    -webkit-background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+}
+
+.text2 {
+    text-align: center;
+    color: #555;
+}
+
+/* ===== Tech Grid ===== */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
